@@ -1,0 +1,20 @@
+// General Colors
+$color-default: #333333;
+$color-primary: #1474D5;
+
+// Fonts
+$font-title: 'Montserrat', sans-serif;
+$font-body: 'Lato', sans-serif;
+
+// Mixins
+@mixin animation-transition {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
