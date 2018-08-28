@@ -22,7 +22,13 @@ var askerVM = new Vue({
   },
   methods: {
     getAnswer:  function () {
-      if (this.question.indexOf('?') === -1) {
+      if (this.question === '') {
+        wrapper.classList.remove('dark');
+        this.answer = '';
+        this.helper = 'Just ask. Don\'t be shy :)';
+        this.image = '';
+        return
+      } else if (this.question.indexOf('?') === -1) {
         wrapper.classList.add('dark');
         this.answer = '';
         this.helper = 'Question mark not found???';
@@ -39,7 +45,7 @@ var askerVM = new Vue({
           wrapper.classList.remove('dark');
           vm.answer = _.capitalize(response.data.answer);
           vm.image = _.capitalize(response.data.image);
-          vm.helper = 'Ask again';
+          vm.helper = 'Have another question? Ask again';
         })
         .catch(function (error) {
           wrapper.classList.remove('dark');

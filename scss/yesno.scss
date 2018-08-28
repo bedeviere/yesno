@@ -131,6 +131,19 @@ h2 {
 	z-index: 1;
 }
 
+.form-control {
+	&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	    color: darken( white, 40% );
+	    opacity: 1; /* Firefox */
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	    color: darken( white, 40% );;
+	}
+	&::-ms-input-placeholder { /* Microsoft Edge */
+	    color: darken( white, 40% );;
+	}
+}
+
 .form-ask,
 .form-answer {
 	position: absolute;
