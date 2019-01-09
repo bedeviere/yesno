@@ -35,8 +35,8 @@
 <body>
     <div class="wrapper">
         <div id="asker">
-            <img class="asker-img" v-bind:src="image" v-bind:title="answer">
-            <div class="asker-box text-center">
+            <!-- <img class="asker-img" v-bind:src="image" v-bind:title="answer"> -->
+            <div class="asker-box text-center" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
                 <div class="form-group form-answer">
                     <h2>{{ answer }}</h2>
                 </div>
